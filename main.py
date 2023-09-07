@@ -29,7 +29,7 @@ class multiprocessingTestClass(object):
 
 if __name__ == '__main__':
     root = tk.Tk()
-    a = multiprocessingTestClass() # create class with 
+    a = multiprocessingTestClass() # create class with computations
     tk.Button(root, text = 'Start', command= lambda: a.run_pool()).pack(side='top')
     tk.Button(root, text = 'Print', command= lambda: a.print_result()).pack(side='top')
     root.mainloop()
