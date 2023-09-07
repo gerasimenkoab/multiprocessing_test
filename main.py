@@ -18,7 +18,7 @@ class multiprocessingTestClass(object):
         print("sleep time:", sleepTime, ' process ID:', os.getpid())
         time.sleep(sleepTime)
         return x * x
-    def run_pool_class(self):
+    def run_pool(self):
         '''Run pool of processes and recieve result'''
         with Pool(self.pool_size) as p_class:
             self.result =  p_class.map(self.f_worker,[1,5,3,6,9])
@@ -30,6 +30,6 @@ class multiprocessingTestClass(object):
 if __name__ == '__main__':
     root = tk.Tk()
     a = multiprocessingTestClass() # create class with 
-    tk.Button(root, text = 'Start', command= lambda: a.run_pool_class()).pack(side='top')
+    tk.Button(root, text = 'Start', command= lambda: a.run_pool()).pack(side='top')
     tk.Button(root, text = 'Print', command= lambda: a.print_result()).pack(side='top')
     root.mainloop()
