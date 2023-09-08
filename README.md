@@ -1,1 +1,1 @@
-# multiprocessing_test
+Simple examples of multiprocessing module usage.
